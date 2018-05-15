@@ -34,5 +34,5 @@ def input_to_index(number)
   index = number - 1
   return index
 end
-    
+
 end
