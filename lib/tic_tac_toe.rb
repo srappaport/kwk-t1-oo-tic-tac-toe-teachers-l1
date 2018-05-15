@@ -122,21 +122,21 @@ def draw?
   end
 end
 #over
-def over?(board)
-  if won?(board)
+def over?
+  if won?
     return true
-  elsif full?(board)
+  elsif full?
     return true
   else
     return false
   end
 end
 #winner
-def winner(board)
-  if won?(board)
-    win_combination = won?(board)
+def winner
+  if won?
+    win_combination = won?
     windex = win_combination[0]
-    if board[windex] == "X"
+    if @board[windex] == "X"
       return "X"
     else
       return "O"
@@ -145,11 +145,11 @@ def winner(board)
 end
 
 
-def play(board)
+def play
   puts "Welcome to Tic Tac Toe!"
-  until over?(board)
-    turn_count = turn_count(board)
-    value = current_player(board)
+  until over?
+    turn_count = turn_count
+    value = current_player
     turn(board,value)
   end
   if won?(board)
