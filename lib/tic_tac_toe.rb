@@ -39,8 +39,8 @@ def move(index, counter = "X")
   @board[index]=counter
 end
 # position_taken
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
+def position_taken?(index)
+  !(@board[index].nil? || @board[index] == " ")
 end
 #valid move
 def valid_move?(array, index)
