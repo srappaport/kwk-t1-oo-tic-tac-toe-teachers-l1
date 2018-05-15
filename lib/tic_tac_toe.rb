@@ -44,7 +44,7 @@ def position_taken?(index)
 end
 #valid move FIX ME
 def valid_move?(index)
-  if position_taken?(@board,index) == false && index.between?(0,8)
+  if position_taken?(index) == false && index.between?(0,8)
     true
   else
     false
@@ -56,11 +56,11 @@ def turn(value)
   puts "Please enter 1-9:"
   input = gets.strip
   index=input_to_index(input)
-  if valid_move?(@board, index) == true
-    move(@board, index, value)
-    display_board(@board)
+  if valid_move?(index) == true
+    move(index, value)
+    display_board
   else
-    turn(@board,value)
+    turn(value)
   end
 end
 # turn count
