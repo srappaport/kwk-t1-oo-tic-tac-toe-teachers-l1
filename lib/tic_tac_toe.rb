@@ -114,10 +114,10 @@ def full?
   end
 end
 # draw
-def draw?(board)
-  if won?(board)
+def draw?
+  if won?
     return false
-  else full?(board)
+  else full?
     return true
   end
 end
