@@ -43,8 +43,8 @@ def position_taken?(index)
   !(@board[index].nil? || @board[index] == " ")
 end
 #valid move
-def valid_move?(array, index)
-  if position_taken?(array,index) == false && index.between?(0,8)
+def valid_move?(index)
+  if position_taken?(@board,index) == false && index.between?(0,8)
     true
   else
     false
