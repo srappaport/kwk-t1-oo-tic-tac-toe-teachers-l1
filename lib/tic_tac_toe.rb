@@ -83,14 +83,14 @@ def current_player
   end
 end
 # won
-def won?(board)
+def won?
   WIN_COMBINATIONS.each do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
     win_index_3 = win_combination[2]
-    p_1 = board[win_index_1]
-    p_2 = board[win_index_2]
-    p_3 = board[win_index_3]
+    p_1 = @board[win_index_1]
+    p_2 = @board[win_index_2]
+    p_3 = @board[win_index_3]
     if p_1 == "X" && p_2 == "X" && p_3 == "X"
       return win_combination
       winner = "X"
@@ -106,8 +106,8 @@ def won?(board)
   end
 end
 # full
-def full?(board)
-  if board.include? " "
+def full?
+  if @board.include? " "
     return false
   else
     return true
