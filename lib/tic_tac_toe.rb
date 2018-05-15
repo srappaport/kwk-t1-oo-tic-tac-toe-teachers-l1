@@ -34,5 +34,21 @@ def input_to_index(number)
   index = number - 1
   return index
 end
+## move
+def move(array, index, value)
+  array[index]=value
+end
+# position_taken
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
+#valid move
+def valid_move?(array, index)
+  if position_taken?(array,index) == false && index.between?(0,8)
+    true
+  else
+    false
+  end
+end
 
 end
