@@ -150,7 +150,7 @@ def play
   until over?
     turn_count = turn_count
     value = current_player
-    turn(board,value)
+    turn(value)
   end
   if won?
     win=winner
