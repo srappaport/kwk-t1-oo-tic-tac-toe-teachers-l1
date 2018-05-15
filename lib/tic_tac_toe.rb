@@ -152,8 +152,8 @@ def play
     value = current_player
     turn(board,value)
   end
-  if won?(board)
-    win=winner(board)
+  if won?
+    win=winner
     puts "Congratulations #{win}!"
   else
     puts "Cat's Game!"
