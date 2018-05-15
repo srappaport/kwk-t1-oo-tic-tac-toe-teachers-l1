@@ -35,8 +35,8 @@ def input_to_index(number)
   return index
 end
 ## move
-def move(array, index, value)
-  array[index]=value
+def move(index, counter = "X")
+  @board[index]=counter
 end
 # position_taken
 def position_taken?(board, index)
